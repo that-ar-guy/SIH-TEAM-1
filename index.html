@@ -10,13 +10,14 @@
 <body>
 
     <!-- Navbar -->
-    <nav>
-        <div class="logo">
+    <nav class="fade-down">
+        <div class="logo swing">
             <h1>OrthoAI</h1>
         </div>
-        <ul>
+        <ul class="bounce">
             <li><a href="#features">Features</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#upload">Upload</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -24,7 +25,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
+        <div class="hero-content zoom-in">
             <h1 class="fade-in">AI-Powered Orthophotos Feature Extraction</h1>
             <p class="slide-up">Accurately identify building footprints, roads, waterbodies, and more from drone imagery.</p>
             <a href="#features" class="cta-btn pulse">Explore Features</a>
@@ -33,46 +34,72 @@
 
     <!-- Features Section -->
     <section id="features" class="features">
-        <h2>Key Features</h2>
+        <h2 class="fade-in">Key Features</h2>
         <div class="feature-cards">
-            <div class="feature-card slide-in-left">
+            <div class="feature-card slide-in-left bounce-in">
                 <h3>Building Footprint Extraction</h3>
                 <p>Accurate detection of built-up areas, roof types, and classifications for property tax calculation, solar energy analysis, and more.</p>
             </div>
-            <div class="feature-card slide-in-right">
+            <div class="feature-card slide-in-right bounce-in">
                 <h3>Road Feature Identification</h3>
                 <p>Precise road mapping for rural development and planning, improving infrastructure and access.</p>
             </div>
-            <div class="feature-card slide-in-left">
+            <div class="feature-card slide-in-left bounce-in">
                 <h3>Waterbody Detection</h3>
                 <p>Identification of waterbodies for efficient resource management and disaster preparedness.</p>
-            </div>
-            <div class="feature-card slide-in-right">
-                <h3>Land Use Categorization</h3>
-                <p>Classifies land use types such as residential, commercial, and agricultural areas for better rural planning.</p>
-            </div>
-            <div class="feature-card slide-in-left">
-                <h3>Data-Driven Insights</h3>
-                <p>Generates comprehensive reports with insights for village-level planning and reducing property disputes.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About the Solution</h2>
-        <p class="fade-in">This AI model leverages cutting-edge CNNs to process drone imagery for rural property surveys, enabling accurate feature identification with 95% accuracy. Our solution helps streamline rural development, reduce disputes, and support village-level planning.</p>
+    <!-- Upload Section -->
+    <section id="upload" class="upload fade-in">
+        <h2>Upload Your Orthophotos</h2>
+        <p class="slide-up">Drag & drop your orthophotos here or click to upload.</p>
+        <div class="upload-container">
+            <form class="upload-form zoom-in" id="uploadForm">
+                <label for="file-upload" class="upload-label">
+                    <input type="file" id="file-upload" accept="image/*">
+                    <div class="upload-area shake">
+                        <i class="upload-icon">📂</i>
+                        <p>Click or drag & drop to upload</p>
+                    </div>
+                </label>
+                <button type="submit" class="submit-btn pulse">Submit</button>
+            </form>
+        </div>
     </section>
+    <!-- About the Solution Section -->
+<section id="about" class="about fade-in">
+    <h2>About the Solution</h2>
+    <p>OrthoAI leverages cutting-edge machine learning models to accurately extract features from orthophotos, such as building footprints, roads, and waterbodies. We employ the following types of models to achieve this:</p>
+    <div class="solution-details">
+        <h3>1. Convolutional Neural Networks (CNNs)</h3>
+        <p>CNNs are used for their ability to automatically detect spatial patterns in images. This allows for accurate classification of buildings, roads, and other features.</p>
+
+        <h3>2. Semantic Segmentation Models</h3>
+        <p>These models label each pixel in an image, making them ideal for identifying specific areas such as building footprints and waterbodies.</p>
+
+        <h3>3. Object Detection Models</h3>
+        <p>Object detection models like YOLO and Faster R-CNN help localize and classify features, such as roads and buildings, by drawing bounding boxes around them.</p>
+
+        <h3>4. Custom Architectures</h3>
+        <p>We design custom deep learning architectures tailored to the complexities of orthophotos, ensuring higher accuracy in feature detection.</p>
+
+        <h3>5. Transfer Learning</h3>
+        <p>Using pre-trained models fine-tuned on our dataset, we reduce training time while improving model performance.</p>
+    </div>
+</section>
+
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-        <h2>What People Say</h2>
+        <h2 class="slide-up">What People Say</h2>
         <div class="testimonial-cards">
-            <div class="testimonial-card slide-in-left">
+            <div class="testimonial-card slide-in-left bounce-in">
                 <p>"OrthoAI transformed how we handle land surveys in our village. The accuracy is amazing!"</p>
                 <h4>- Village Admin, SVAMITVA Scheme</h4>
             </div>
-            <div class="testimonial-card slide-in-right">
+            <div class="testimonial-card slide-in-right bounce-in">
                 <p>"With OrthoAI, we’ve been able to classify our land accurately, which has helped us with better rural development planning."</p>
                 <h4>- Rural Planner</h4>
             </div>
@@ -80,21 +107,21 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact fade-in">
         <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us for more information.</p>
-        <form class="fade-in">
+        <p>Feel free to reach out to us for more information!</p>
+        <form class="zoom-in">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Submit</button>
+            <button type="submit" class="shake">Submit</button>
         </form>
     </section>
 
-    <footer>
+    <footer class="fade-up">
         <p>© 2024 OrthoAI. All rights reserved.</p>
     </footer>
 
